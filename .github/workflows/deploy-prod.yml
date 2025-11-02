@@ -55,4 +55,5 @@ jobs:
           --image $IMAGE_URI \
           --platform managed \
           --region ${{ env.SERVICE_REGION }} \
-          --allow-unauthenticated
+          --allow-unauthenticated \
+          --service-account=${{ secrets.GCP_SA_NAME }}
