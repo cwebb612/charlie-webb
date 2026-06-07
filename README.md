@@ -1,7 +1,7 @@
-A website for Charlie Webb
+Charlie Webb's Personal Portfolio
 
-Run with: `npm run dev`
+Includes a hand written index.html
 
-Production builds use: `npm run build && npm run start`
+That is it nerds. If it aint broke dont fix it.
 
-Dockerized and served to charlie-webb.com
+Deployed on firebase hosting to charlie-webb.com
