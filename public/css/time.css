@@ -34,7 +34,7 @@
 }
 
 body {
-  background: linear-gradient(var(--sky-top), var(--sky-bottom));
+  background: #1e1a2e linear-gradient(var(--sky-top), var(--sky-bottom));
   animation: day 60s linear infinite;
 }
 
