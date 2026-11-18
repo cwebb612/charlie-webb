@@ -1,0 +1,30 @@
+* {
+  font-family: 'Silkscreen', Verdana, sans-serif;
+  letter-spacing: 0.0625rem;
+  color: #c9ccc9;
+}
+
+body {
+  margin: 0;
+}
+
+.doc {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+  padding-bottom: 0.75rem;
+  background: url("../static/grass.png") repeat-x bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #a9a8a8;
+}

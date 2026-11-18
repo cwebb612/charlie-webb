@@ -5,72 +5,12 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      background-color: #161616;
-      margin: 0;
-      min-height: 100vh;
-    }
-
-    * {
-      font-family: Verdana, sans-serif;
-      letter-spacing: 1px;
-      color: #EEE
-    }
-
-    .doc {
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      box-sizing: border-box;
-      color: #AAA;
-    }
-
-    .title {
-      margin: 0;
-      font-weight: 500;
-      letter-spacing: 2px;
-    }
-
-    .horizontal-line {
-      border-bottom: 1px solid #888;
-      padding: 4px 0;
-    }
-
-    .text {
-      padding: 16px 0 0 0;
-    }
-
-    li {
-      padding-bottom: 4px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #BBB;
-    }
-
-    .go-down {
-      flex-grow: 1;
-    }
-
-    footer {
-      color: #888
-    }
-
-    footer > a {
-      color: #888
-    }
-
-    footer > a:hover {
-      color: #777
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/time.css">
   <title>
     Charlie Webb
   </title>
@@ -78,35 +18,51 @@
 </head>
 <!-- If ur reading this, hire me -->
 <body>
+  <i id="morning"></i>
+  <i id="noon"></i>
+  <i id="night"></i>
   <div class="doc">
-    <h1 class="title">
-      Charlie Webb
-    </h1>
-    <div class="horizontal-line"></div>
-    <span class="text">This is my landing page. Go somewhere cooler.</span>
-    <ul>
-      <li>
-        <a target="_blank" href="https://www.linkedin.com/in/webb-charles/">
-          Linkedin
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://github.com/cwebb612">
-          Github
-        </a>
-      </li>
-      <li>
-        <a target="_blank" href="https://chartester.com">
-          Portfolio
-        </a>
-      </li>
-    </ul>
-    <div class="go-down"></div>
-    <footer>© Charlie Webb.
-      <a target="_blank" href="https://github.com/cwebb612/charlie-webb">
-        (&lt2 KB. You're welcome.)
-      </a>
+    <header>
+      <h1 class="title">
+        Charlie Webb
+      </h1>
+    </header>
+    <nav>
+      <ul>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/in/webb-charles/">
+            Linkedin
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://github.com/cwebb612">
+            Github
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://chartester.com">
+            Developer Portfolio
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://chartester.com">
+            Photography
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <footer>
+      <div>
+        <button class="campfire" popovertarget="rest"><img src="./static/campfire.png" alt="Campfire"></button>
+      </div>
     </footer>
+    <div id="rest" popover>
+      <p>Rest until...</p>
+      <a class="option" href="?morning#morning">Morning.</a>
+      <a class="option" href="?noon#noon">Noon.</a>
+      <a class="option" href="?night#night">Night.</a>
+      <button class="option" popovertarget="rest" popovertargetaction="hide">Never mind.</button>
+    </div>
   </div>
 </body>
 
