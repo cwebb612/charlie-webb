@@ -67,7 +67,7 @@ body:has(#noon:target)::before {
 
 body:has(#night:target),
 body:has(#night:target)::before {
-  animation-delay: -45s;
+  animation-delay: -40s;
 }
 
 .campfire {
