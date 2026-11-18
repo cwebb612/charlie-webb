@@ -38,11 +38,35 @@ body {
   animation: day 60s linear infinite;
 }
 
-body:has(#noon:target) {
+/* Stars */
+@keyframes stars {
+  0%, 55%, 97%, 100% {
+    opacity: 0;
+  }
+  65%, 90% {
+    opacity: 1;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: url("../static/stars.png") repeat;
+  image-rendering: pixelated;
+  opacity: 0;
+  animation: stars 60s linear infinite;
+}
+
+body:has(#noon:target),
+body:has(#noon:target)::before {
   animation-delay: -15s;
 }
 
-body:has(#night:target) {
+body:has(#night:target),
+body:has(#night:target)::before {
   animation-delay: -45s;
 }
 
