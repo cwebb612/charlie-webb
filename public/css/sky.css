@@ -1,0 +1,49 @@
+@property --sky-top {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #3a2a4a;
+}
+
+@property --sky-bottom {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #7a4a3a;
+}
+
+@keyframes day {
+  /* Morning */
+  0%, 100% {
+    --sky-top: #48335c;
+    --sky-bottom: #935541;
+  }
+  /* Noon */
+  25% {
+    --sky-top: #295983;
+    --sky-bottom: #7da3c3;
+  }
+  /* Sunset */
+  50% {
+    --sky-top: #2b1b4a;
+    --sky-bottom: #c4502e;
+  }
+  /* Night */
+  75% {
+    --sky-top: #18182b;
+    --sky-bottom: #161616;
+  }
+}
+
+body {
+  background: #1e1a2e linear-gradient(var(--sky-top), var(--sky-bottom));
+  animation: day 60s linear infinite;
+}
+
+body:has(#noon:target),
+body:has(#noon:target)::before {
+  animation-delay: -15s;
+}
+
+body:has(#night:target),
+body:has(#night:target)::before {
+  animation-delay: -40s;
+}

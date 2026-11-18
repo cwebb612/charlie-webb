@@ -1,0 +1,12 @@
+.campfire {
+  display: block;
+  margin-left: auto;
+  padding-right: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.campfire img {
+  display: block;
+}
